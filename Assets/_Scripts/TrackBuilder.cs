@@ -22,6 +22,7 @@ public class TrackBuilder : MonoBehaviour {
     public void Track()
     {
         track = Instantiate (Tracks [Random.Range(0,8)], TrackSpawnerPos.position, Quaternion.identity) as GameObject;
+        Destroy(track.gameObject, 8f);
         Vector3 temp = TrackSpawnerPos.position;
         temp.y = 0;
         temp.x = 0;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerKiller : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class PlayerKiller : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("retry_Scene");
         }
     }
 }
